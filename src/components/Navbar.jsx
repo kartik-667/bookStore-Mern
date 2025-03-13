@@ -46,9 +46,11 @@
 
 // export default Navbar
 import React, { useEffect, useState } from 'react';
-
+import { Link } from 'react-router';
+import Login from './Login';
 function Navbar() {
   const [scrolling, setScrolling] = useState(false);
+  const [ismodalopen, setismodalopen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,16 +79,25 @@ function Navbar() {
         <div className="middle">
           <ul className="flex gap-6 p-4 text-lg">
             <li>
-              <a className="hover:text-blue-500" href="">Home</a>
+              <Link to="/">
+              <a className="hover:text-blue-500" href="/">Home</a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-blue-500" href="">Course</a>
+              <Link to="/course">
+              <a className="hover:text-blue-500" href="/course">Course</a>
+                </Link>
+              
             </li>
             <li>
-              <a className="hover:text-blue-500" href="">Contact</a>
+              <Link to="/contact">
+              <a className="hover:text-blue-500" href="/contact">Contact</a>
+              </Link>
             </li>
             <li>
-              <a className="hover:text-blue-500" href="">About</a>
+              <Link to="/about">
+              <a className="hover:text-blue-500" href="/about">About</a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -96,11 +107,18 @@ function Navbar() {
             className="border w-[200px] p-1 rounded-md hover:border-blue-300 outline-none"
             placeholder="Search here 🔍"
           />
-          <button className="hover:border-black-300 border-2 w-[6rem] p-2 rounded-sm hover:bg-blue-400">
+          {/* <button className="hover:border-black-300 border-2 w-[6rem] p-2 rounded-sm hover:bg-blue-400">
             Login
-          </button>
+          </button> */}
+          <button onClick={()=> setismodalopen(true)} data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  className='bg-blue-500 mb-4 hover:bg-blue-700 duration-200 text-white p-3 m-3 rounded-md w-20'>
+                    Login
+                </button>
+                <button data-modal-target="authentication-modal" data-modal-toggle="authentication-modal" className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+  Toggle modal
+</button>
         </div>
       </div>
+      {ismodalopen && <Login onClose={()=> setismodalopen(false)}></Login>}
     </>
   );
 }

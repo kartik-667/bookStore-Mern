@@ -6,17 +6,20 @@ import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
 import Freebook from './components/Freebook'
-
+import { Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import Course from './pages/Course'
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navbar></Navbar>
-      <div className='mt-24'></div>
-      <Banner></Banner>
-      <Freebook></Freebook>
-      <Footer></Footer>
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='/course' element={<Course></Course>}></Route>
+
+    </Routes>
+      
 
     </>
   )
