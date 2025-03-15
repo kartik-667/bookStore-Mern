@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "The Hidden World",
+        "price": 450,
+        "category": "fiction",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 2,
+        "name": "Mastering JavaScript",
+        "price": 600,
+        "category": "programming",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 3,
+        "name": "The Art of War",
+        "price": 350,
+        "category": "history",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 4,
+        "name": "Deep Learning Essentials",
+        "price": 800,
+        "category": "technology",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 5,
+        "name": "Science of the Universe",
+        "price": 550,
+        "category": "science",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 6,
+        "name": "The Mystery Island",
+        "price": 420,
+        "category": "adventure",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 7,
+        "name": "Python for Beginners",
+        "price": 500,
+        "category": "programming",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 8,
+        "name": "Mindset and Success",
+        "price": 380,
+        "category": "self-help",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 9,
+        "name": "Exploring the Cosmos",
+        "price": 720,
+        "category": "science",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    },
+    {
+        "id": 10,
+        "name": "Business Strategy 101",
+        "price": 650,
+        "category": "business",
+        "image": "https://www.clipartmax.com/png/full/21-211188_a-higher-loyalty-book-clip-art-a-higher-loyalty-book-clip-art.png"
+    }
+]
