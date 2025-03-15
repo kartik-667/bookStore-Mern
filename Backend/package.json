@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "mern app bookstore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kartik-667/bookStore-Mern.git"
+  },
+  "author": "kartik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kartik-667/bookStore-Mern/issues"
+  },
+  "homepage": "https://github.com/kartik-667/bookStore-Mern#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1",
+    "nodemon": "^3.1.9"
+  }
+}
