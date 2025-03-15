@@ -55,10 +55,15 @@
 // export default Login
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+// import { useForm, SubmitHandler } from "react-hook-form"
 
 function Login({ onClose }) {
+  
+
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 bg-opacity-50">
+    <div className="fixed inset-0 flex transition-all duration-100  items-center justify-center z-50 bg-opacity-50">
       <div className="relative p-4 w-full max-w-md max-h-full">
         <div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
           <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200 dark:border-gray-600">
@@ -138,9 +143,11 @@ function Login({ onClose }) {
 
               <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
                 Not registered?{' '}
-                <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">
+                {/* <a href="/signup" className="text-blue-700 hover:underline dark:text-blue-500">
                   Create account
-                </a>
+                </a> */}
+                <Link to="/signup">
+                <span className='text-white-500 hover:text-blue-400'>Create account</span></Link>
               </div>
             </form>
           </div>

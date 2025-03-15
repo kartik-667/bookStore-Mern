@@ -9,6 +9,7 @@ import Freebook from './components/Freebook'
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Course from './pages/Course'
+import Signup from './components/Signup'
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -17,6 +18,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home></Home>}></Route>
       <Route path='/course' element={<Course></Course>}></Route>
+      <Route path='/signup' element={<Signup></Signup>}> </Route>
 
     </Routes>
       
