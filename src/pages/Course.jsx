@@ -1,11 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
-import list from '../../public/list'
+// import list from '../../public/list'
 import Card from '../components/Card'
+import axios from 'axios'
 function Course() {
-    console.log(list);
+    // console.log(list);
+
+    const [listdata, setlistdata] = useState([])
+
+    useEffect(() => {
+        const getData=async ()=>{
+          const res=await axios.get('http://localhost:6767/book')
+          // console.log(res.data);
+          setlistdata(res.data)
+          // setlistdata(res.data)
+          // console.log(listdata);
+          
+          
+        }
+        getData()
+      
+    
+      
+    }, []) //empty depedency array means sirf 1 bar run hoga
+    
+
     
   return (
     <>
@@ -21,7 +42,7 @@ function Course() {
             </div>
             <hr />
             <div className="bottom grid grid-cols-3 m-4 p-4">
-                {list.map((ele)=> <Card key={ele.id} item={ele}></Card>)}
+                {listdata.map((ele)=> <Card key={ele.id} item={ele}></Card>)}
             </div>
 
 
