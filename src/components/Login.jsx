@@ -54,13 +54,49 @@
 
 // export default Login
 
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import axios from "axios"
 // import { useForm, SubmitHandler } from "react-hook-form"
 
 function Login({ onClose }) {
+  const [email, setemail] = useState('')
+  const [password, setpassword] = useState('')
   
+  const handlesubmit = async (e) => {
+    e.preventDefault();
 
+    const data = {
+      
+      email,
+      password,
+    };
+
+    try {
+      const res = await axios.post('http://localhost:6767/user/login', data);
+      console.log(res.data);
+
+      if (res.status === 200) {
+        alert('login successfully');
+        // localStorage.setItem('users',JSON.stringify(res.data.user))
+
+      
+      }
+    } catch (error) {
+      if (error.response) {
+        // Handle specific status codes from the backend
+        if (error.response.status === 404) {
+          alert('email/password incorrect');
+        } else {
+          alert('An error occurred. Please try again.');
+        }
+      } else {
+        // Handle network errors or other issues
+        console.error('Error:', error.message);
+        alert('An error occurred. Please check your connection and try again.');
+      }
+    }
+  };
 
   return (
     <div className="fixed inset-0 flex transition-all duration-100  items-center justify-center z-50 bg-opacity-50">
@@ -89,12 +125,14 @@ function Login({ onClose }) {
           </div>
 
           <div className="p-4 md:p-5">
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handlesubmit}>
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                   Your email
                 </label>
                 <input
+                value={email}
+                onChange={(e)=> setemail(e.target.value)}
                   type="email"
                   name="email"
                   id="email"
@@ -109,6 +147,8 @@ function Login({ onClose }) {
                 </label>
                 <input
                   type="password"
+                  value={password}
+                  onChange={(e)=> setpassword(e.target.value)}
                   name="password"
                   id="password"
                   placeholder="••••••••"
@@ -119,7 +159,7 @@ function Login({ onClose }) {
 
               <div className="flex justify-between">
                 <div className="flex items-start">
-                  <input
+                  {/* <input
                     id="remember"
                     type="checkbox"
                     className="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
@@ -127,7 +167,7 @@ function Login({ onClose }) {
                   />
                   <label htmlFor="remember" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Remember me
-                  </label>
+                  </label> */}
                 </div>
                 <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">
                   Lost Password?
