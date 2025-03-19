@@ -48,9 +48,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import Login from './Login';
+import { Authprovider, useAuth } from '../contexts/Authprovider';
+import Logout from './Logout';
 function Navbar() {
   const [scrolling, setScrolling] = useState(false);
   const [ismodalopen, setismodalopen] = useState(false)
+
+  const [authuser, setauthuser]=useAuth()
+  // console.log(authuser);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,9 +116,12 @@ function Navbar() {
           {/* <button className="hover:border-black-300 border-2 w-[6rem] p-2 rounded-sm hover:bg-blue-400">
             Login
           </button> */}
-          <button onClick={()=> setismodalopen(true)} data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  className='bg-blue-500 mb-4 hover:bg-blue-700 duration-200 text-white p-3 m-3 rounded-md w-20'>
+          {!authuser ?<button onClick={()=> setismodalopen(true)} data-modal-target="authentication-modal" data-modal-toggle="authentication-modal"  className='bg-blue-500 mb-4 hover:bg-blue-700 duration-200 text-white p-3 m-3 rounded-md w-20'>
                     Login
-                </button>
+                </button> : <Logout></Logout>}
+
+          
+                
                 
         </div>
       </div>

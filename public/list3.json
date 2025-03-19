@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "JavaScript Essentials",
+      "price": 0,
+      "category": "free",
+      "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794"
+    },
+    {
+      "id": 2,
+      "name": "Node.js Mastery",
+      "price": 15,
+      "category": "paid",
+      "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"
+    },
+    {
+      "id": 3,
+      "name": "Express.js in Depth",
+      "price": 0,
+      "category": "free",
+      "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765"
+    },
+    {
+      "id": 4,
+      "name": "MongoDB for Beginners",
+      "price": 20,
+      "category": "paid",
+      "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c"
+    },
+    {
+      "id": 5,
+      "name": "GraphQL Made Easy",
+      "price": 0,
+      "category": "free",
+      "image": "https://images.unsplash.com/photo-1558888404-622e3b18ddc6"
+    },
+    {
+      "id": 6,
+      "name": "React for Professionals",
+      "price": 25,
+      "category": "paid",
+      "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353"
+    },
+    {
+      "id": 7,
+      "name": "Mastering TypeScript",
+      "price": 0,
+      "category": "free",
+      "image": "https://images.unsplash.com/photo-1528207776546-365bb710ee93"
+    },
+    {
+      "id": 8,
+      "name": "Advanced Web Security",
+      "price": 30,
+      "category": "paid",
+      "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    },
+    {
+      "id": 9,
+      "name": "Docker and Kubernetes",
+      "price": 0,
+      "category": "free",
+      "image": "https://images.unsplash.com/photo-1523475496153-3d6ccf9f2f91"
+    },
+    {
+      "id": 10,
+      "name": "Full-Stack Development",
+      "price": 18,
+      "category": "paid",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    }
+  ]
+  
