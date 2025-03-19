@@ -1,14 +1,15 @@
 import React from 'react'
 import bookimage from "../../public/bookimg.jpg"
-function Card({item}) {
+function Card({item, url}) {
   return (
     <>
       <div class="hover:scale-105 transition-all relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
   <div class="relative p-2.5 h-96 overflow-hidden rounded-xl bg-clip-border">
     <img
-      src={bookimage}
+      src={url ? url : bookimage}
       alt="card-image"
-      class="h-full w-full object-cover rounded-md"
+      className="h-full w-full object-cover rounded-md"
+      loading='lazy'
     />
   </div>
   <div class="p-4">

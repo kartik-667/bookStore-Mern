@@ -13,8 +13,9 @@ function Course() {
     useEffect(() => {
         const getData=async ()=>{
           const res=await axios.get('http://localhost:6767/book')
-          // console.log(res.data);
-          setlistdata(res.data)
+          console.log(res.data);
+          const paid= res.data.filter((ele)=> ele.category==="paid")
+          setlistdata(paid)
           // setlistdata(res.data)
           // console.log(listdata);
           
@@ -42,7 +43,7 @@ function Course() {
             </div>
             <hr />
             <div className="bottom grid grid-cols-3 m-4 p-4">
-                {listdata.map((ele)=> <Card key={ele.id} item={ele}></Card>)}
+                {listdata.map((ele)=> <Card key={ele.id} item={ele} url={ele.image}></Card>)}
             </div>
 
 

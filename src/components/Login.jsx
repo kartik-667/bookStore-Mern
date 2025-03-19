@@ -57,6 +57,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios"
+import toast from 'react-hot-toast';
 // import { useForm, SubmitHandler } from "react-hook-form"
 
 function Login({ onClose }) {
@@ -77,8 +78,12 @@ function Login({ onClose }) {
       console.log(res.data);
 
       if (res.status === 200) {
-        alert('login successfully');
-        // localStorage.setItem('users',JSON.stringify(res.data.user))
+        // alert('');
+        toast.success('Logged in successfully');
+        localStorage.setItem('users',JSON.stringify(res.data.user))
+        setTimeout(()=>{
+          window.location.reload()
+        },2000)
 
       
       }
@@ -86,14 +91,14 @@ function Login({ onClose }) {
       if (error.response) {
         // Handle specific status codes from the backend
         if (error.response.status === 404) {
-          alert('email/password incorrect');
+          toast.error('email/password incorrect');
         } else {
-          alert('An error occurred. Please try again.');
+          toast.error('An error occurred. Please try again.');
         }
       } else {
         // Handle network errors or other issues
         console.error('Error:', error.message);
-        alert('An error occurred. Please check your connection and try again.');
+        toast.error('An error occurred. Please check your connection and try again.');
       }
     }
   };
